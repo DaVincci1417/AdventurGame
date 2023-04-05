@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 public class Launcher {
     public static void inicializar(){
-       Juego juego = new Juego();
        Jugador jugador = new Jugador();
-       juego.enfrentamientos(jugador);
+       Juego juego = new Juego(jugador);
+       juego.enfrentamientos();
     }
 
     public static void main(String[] args) {
