@@ -4,22 +4,23 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Juego {
-    public Juego(){
+    private Araña araña = new Araña("0", "100");
+    private Esqueleto esqueleto = new Esqueleto("0", "500");
+    private Zombie zombie = new Zombie("0", "1000");
+    private Dragon dragon= new Dragon("0", "3000")
+    private Jugador jugador = new Jugador();
+
+
+    public Juego(Jugador jugador){
 
     }
 
     //Enfrentamientos
-    public void enfrentamientos(Jugador jugador){
+    public void enfrentamientos(){
         int vidas = 3;
         int nivel = 1;
         Random aleatorio = new Random();
-        int fuerza = aleatorio.nextInt();
-
-        Araña araña = new Araña("0", "100");
-        Esqueleto esqueleto = new Esqueleto("0", "500");
-        Zombie zombie = new Zombie("0", "1000");
-        Dragon dragon = new Dragon("0", "3000");
-
+  
         if((aleatorio.nextInt(10) + 1) <= 7){
             araña.modificarEstadisticas("fuerza", "9");
         }else{
